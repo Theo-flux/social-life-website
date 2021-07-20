@@ -1,0 +1,284 @@
+:root {
+    --white: #FFFFFF;
+    --lightBlue: #1792D2;
+    --darkBlue: #143774;
+    --grey1: #F8F8F8;
+    --grey2: #EBEBEB;
+    --grey3: #707070;
+    --grey4: #717171;
+}
+
+body {
+    font-size: 1.125rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.current {
+    border-bottom: 2px solid var(--grey4);
+}
+
+
+/* Typography */
+
+p{
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--lightBlue);
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: var(--darkBlue);
+    cursor: pointer;
+}
+.logo-name {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Lora', sans-serif;
+    font-weight: 300;
+    color: var(--darkBlue);
+}
+.logo-tagline {
+    font-size: .7rem;
+    color: var(--lightBlue);
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    margin: 0;
+}
+
+.article-title {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.5rem;
+    color: var(--lightBlue);
+    margin: 0;
+}
+
+.article-read-more {
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--lightBlue);
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+    text-decoration: underline;
+    color: var(--darkBlue);
+}
+
+.article-body {
+    font-size: 1.125rem;
+    color: var(--grey3);
+}
+
+.article-info {
+    font-size: 0.875rem;
+    color: var(--grey4);
+    order: -1;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+.widget-title {
+    color: var(--darkBlue);
+    font-size: 1.5rem;
+}
+
+.widget-recent-post-title {
+    color: var(--lightBlue);
+    font-size: 1.125rem;
+    font-family: 'Lora', sans-serif;
+    font-weight: 300;
+}
+
+.widget-body {
+    font-size: 0.875rem;
+    font-family: 'Lora', sans-serif;
+    color: var(--lightBlue);
+}
+/* link and Navigation */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items:center;
+    justify-content: space-between;
+    padding:0em;
+
+}
+
+nav li {
+    margin: 0 .5em;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--grey4);
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: none;
+}
+
+
+/* Layout */
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+header {
+    background-color: var(--grey1);
+    padding: 2em 0;
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: var(--darkBlue);
+    text-align: center;
+    color: var(--white);
+    padding: 2em 0;
+    margin-top: 2em;
+}
+
+footer p{
+    font-size: 0.875rem;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    letter-spacing: .08rem;
+}
+
+footer p:last-child {
+    
+    font-weight: 300;
+    opacity: 0.54;
+}
+
+
+.container-nav,
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo {
+    text-align: center;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-featured {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--grey3);
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2em;
+}
+.article-image {
+    order: -2;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-widget {
+    border: 20px solid var(--grey2);
+    padding: 1em;
+}
+
+.sidebar-widget:first-child {
+    margin-bottom: 2em;
+}
+
+.widget-recent-post{
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--grey3);
+}
+
+.widget-recent-post:last-child {
+    border: 0;
+}
+
+/* media query */
+@media (min-width: 675px) {
+
+    .container-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .container-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 25%;
+    }
+
+    .article-recent {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .article-recent-main {
+        width: 65%;
+    }
+
+    .article-recent-secondary {
+        width: 30%;
+    }
+
+    .article-image {
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+        object-position: inherit;
+    }
+
+    .article-recent-secondary .article-info{
+        margin-top: 0;
+    }
+}
