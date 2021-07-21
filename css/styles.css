@@ -20,7 +20,8 @@ img {
 }
 
 .current {
-    border-bottom: 2px solid var(--grey4);
+    border-bottom: 2px solid var(--darkBlue);
+    color: var(--darkBlue);
 }
 
 
@@ -57,9 +58,10 @@ a:focus {
 }
 
 .article-title {
-    font-family: 'Lora', sans-serif;
+  color: var(--darkBlue);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
     font-size: 1.5rem;
-    color: var(--lightBlue);
     margin: 0;
 }
 
@@ -169,7 +171,7 @@ footer p{
 }
 
 footer p:last-child {
-    
+
     font-weight: 300;
     opacity: 0.54;
 }
@@ -234,6 +236,26 @@ aside {
     border: 0;
 }
 
+.article-featured .article-image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* about me page */
+.image-about {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2em;
+}
+
+.about-subtitle {
+  color: var(--lightBlue);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
 /* media query */
 @media (min-width: 675px) {
 
@@ -275,7 +297,6 @@ aside {
         width: 100%;
         min-height: 250px;
         object-fit: cover;
-        object-position: inherit;
     }
 
     .article-recent-secondary .article-info{
